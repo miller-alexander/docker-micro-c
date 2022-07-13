@@ -3,7 +3,7 @@ name: push
 on: push
 
 jobs:
-  publish-hello-world-image:
+  push-micro-c-image:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +16,7 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Build the hello-world Docker image
+    - name: Build the micro-c Docker image
       run: |
         docker build . --tag ghcr.io/atex91/micro-c:latest
         docker push ghcr.io/atex91/micro-c:latest
