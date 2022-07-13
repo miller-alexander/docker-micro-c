@@ -19,4 +19,5 @@ jobs:
     - name: Build the micro-c Docker image
       run: |
         docker build . --tag ghcr.io/atex91/micro-c:latest
+        docker run ghcr.io/atex91/micro-c:latest
         docker push ghcr.io/atex91/micro-c:latest
